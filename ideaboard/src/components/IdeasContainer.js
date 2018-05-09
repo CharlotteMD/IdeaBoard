@@ -3,13 +3,17 @@ import axios from 'axios';
 import update from 'immutability-helper';
 
 import Idea from './Idea';
+import IdeaForm from './IdeaForm';
+
 
 class IdeasContainer extends Component {
 
   constructor(props) {
     super(props);
     this.state = {
-      ideas: []
+      ideas: [],
+      editingIdeaId: null,
+      notification: ''
     };
   }
 
@@ -37,9 +41,21 @@ class IdeasContainer extends Component {
         const ideas = update(this.state.ideas, {
           $splice: [[0, 0, response.data]]
         });
-        this.setState({ideas: ideas});
+        this.setState({
+          ideas: ideas,
+          editingIdeaId: response.data.id});
       })
       .catch(error => console.log(error));
+  }
+
+  updateIdea = (idea) => {
+    const ideaIndex = this.state.ideas.findIndex(x => x.id === idea.id);
+    const ideas = update(this.state.ideas, {
+      [ideaIndex]: { $set: idea }
+    });
+    this.setState({
+      ideas: ideas,
+      notification: 'All changes saved'});
   }
 
   render() {
@@ -54,9 +70,22 @@ class IdeasContainer extends Component {
           New Idea
         </button>
 
-        {this.state.ideas.map((idea) => {
+        <span className="notification">
+          {this.state.notification}
+        </span>
+
+        {/* {this.state.ideas.map((idea) => {
           return(
             <Idea idea={idea} key={idea.id} />);
+        })} */}
+
+        {this.state.ideas.map((idea) => {
+          if(this.state.editingIdeaId === idea.id) {
+            return(<IdeaForm idea={idea} key={idea.id}
+              updateIdea={this.updateIdea} />);
+          } else {
+            return (<Idea idea={idea} key={idea.id} />);
+          }
         })}
 
       </div>
