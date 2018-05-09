@@ -58,6 +58,14 @@ class IdeasContainer extends Component {
       notification: 'All changes saved'});
   }
 
+  resetNotification = () => {
+    this.setState({notification: ''});
+  }
+
+  enableEditing = (id) => {
+    this.setState({editingIdeaId: id});
+  }
+
   render() {
 
 
@@ -82,9 +90,11 @@ class IdeasContainer extends Component {
         {this.state.ideas.map((idea) => {
           if(this.state.editingIdeaId === idea.id) {
             return(<IdeaForm idea={idea} key={idea.id}
-              updateIdea={this.updateIdea} />);
+              updateIdea={this.updateIdea}
+              resetNotification={this.resetNotification} />);
           } else {
-            return (<Idea idea={idea} key={idea.id} />);
+            return (<Idea idea={idea} key={idea.id}
+              onClick={this.enableEditing} />);
           }
         })}
 
