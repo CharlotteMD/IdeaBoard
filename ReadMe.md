@@ -15,3 +15,6 @@ I LOVE the Create React App way of creating a react app! It was very easy and I 
 I can now more easily visualise how state and props works. The parent component (in this case IdeasContainer) has the state, and passes down versions of the data in the form of props.  The state of data can change (be deleted, updated or added to) but props cant and that's how React only refreshes the parts of the page that have been changed by changing the info that is passed to props. It also makes the code much DRYer as you can reuse templates and just pass them different data.
 
 I also learnt how you can add extra fields to the state so you can monitor what is happening in your app and share it with the user.  For example, I include a state for the id of the idea being edited and a notification to pop up when changes had been made.  I really struggled with telling the application which idea to edit when I was working on my MERN app as I had no way of specifying which idea on the page I wanted to edit. I now know to tell the program through the state.
+
+To run, first run the ideaboard-api with command rails s -p 3001
+Then run the ideaboard file with npm start

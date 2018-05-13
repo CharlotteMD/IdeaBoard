@@ -7,10 +7,11 @@ class App extends Component {
     return (
       <div className="App">
         <div className="App-header">
-          <h1>BrightIdea</h1>
+          <img className="logo" src="../brightidea.png"></img>
         </div>
         <IdeasContainer />
       </div>
+
     );
   }
 }

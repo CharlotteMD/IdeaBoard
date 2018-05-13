@@ -55,7 +55,7 @@ class IdeasContainer extends Component {
     });
     this.setState({
       ideas: ideas,
-      notification: 'All changes saved'});
+      notification: 'Your idea has been saved!'});
   }
 
   resetNotification = () => {
@@ -79,10 +79,8 @@ class IdeasContainer extends Component {
 
   render() {
 
-
-
     return (
-      <div>
+      <div className="container">
 
         <div className="new">
           <button className="newIdeaButton"
@@ -94,11 +92,6 @@ class IdeasContainer extends Component {
             {this.state.notification}
           </span>
         </div>
-
-        {/* {this.state.ideas.map((idea) => {
-          return(
-            <Idea idea={idea} key={idea.id} />);
-        })} */}
 
         {this.state.ideas.map((idea) => {
           if(this.state.editingIdeaId === idea.id) {

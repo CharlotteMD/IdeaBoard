@@ -1,6 +1,23 @@
+/* font-family: 'Satisfy', cursive;
+font-family: 'Lato', sans-serif; */
+
+/* pink: EC6189
+orange: FFB800
+yellow: FFF700
+green: 5CF64A
+blue: 1BE7FF */
+
+html {
+  margin: 0 auto;
+}
+
+.logo {
+  height: 200px;
+}
+
 .App-header {
   text-align: center;
-  height: 150px;
+  height: 200px;
   padding: 20px;
 }
 
@@ -8,25 +25,40 @@
   font-size: large;
 }
 
+.container {
+  margin: 50px;
+  text-align: center;
+}
+
 .tile {
-  height: 150px;
-  width: 150px;
+  height: 130px;
+  width: 130px;
   margin: 10px;
-  background: lightyellow;
+  background: #FFB800;
   float: left;
   font-size: 11px;
   text-align: left;
+  padding: 10px;
+}
+
+.tile:hover {
+  background: #1BE7FF;
+}
+
+h4 {
+  font-size: 12px;
 }
 
 .newIdeaButton {
-  background: darkblue;
+  background: #EC6189;
   color: white;
   border: none;
   font-size: 18px;
   cursor: pointer;
-  margin-right: 10px;
-  margin-left: 10px;
-  padding:10px;
+  text-align: center;
+  padding: 20px;
+  margin: 20px;
+  margin-top: -20px;
 }
 
 .input {
@@ -39,7 +71,7 @@
 }
 
 .input:focus {
-  border: solid 1px lightgrey;
+  border: solid 1px grey;
 }
 
 textarea {
@@ -52,9 +84,9 @@ textarea {
   visibility: hidden;
   float: right;
   margin: 5px;
-  font-size: 14px;
+  font-size: 30px;
   cursor: pointer;
-  color: red;
+  color: #FFF700;
 }
 
 .tile:hover .deleteButton {
