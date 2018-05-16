@@ -1,0 +1,99 @@
+/* font-family: 'Satisfy', cursive;
+font-family: 'Lato', sans-serif; */
+
+/* pink: EC6189
+orange: FFB800
+yellow: FFF700
+green: 5CF64A
+blue: 1BE7FF */
+
+html {
+  margin: 0 auto;
+}
+
+.logo {
+  height: 200px;
+}
+
+.App-header {
+  text-align: center;
+  height: 200px;
+  padding: 20px;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.container {
+  margin: 50px;
+  text-align: center;
+}
+
+.tile {
+  height: 140px;
+  width: 140px;
+  margin: 10px;
+  background: #FFB800;
+  float: left;
+  font-size: 11px;
+  text-align: left;
+  padding: 5px;
+}
+
+.tile:hover {
+  background: #1BE7FF;
+}
+
+h4 {
+  font-size: 12px;
+}
+
+.newIdeaButton {
+  background: #EC6189;
+  color: white;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  text-align: center;
+  padding: 20px;
+  margin: 20px;
+  margin-top: -20px;
+}
+
+.input {
+  border: 0;
+  background: none;
+  outline: none;
+  margin-top:10px;
+  width: 135px;
+  font-size: 11px;
+}
+
+.input:focus {
+  border: solid 1px grey;
+}
+
+textarea {
+  resize: none;
+  height: 90px;
+  font-size: 11px;
+}
+
+.deleteButton {
+  visibility: hidden;
+  float: right;
+  margin: 5px;
+  font-size: 30px;
+  cursor: pointer;
+  color: #FFF700;
+}
+
+.tile:hover .deleteButton {
+  visibility: visible;
+}
+
+.mapped {
+  /* text-align: center; */
+  margin: 0 auto;
+}

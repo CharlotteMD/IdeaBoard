@@ -16,11 +16,7 @@ I can now more easily visualise how state and props works. The parent component 
 
 I also learnt how you can add extra fields to the state so you can monitor what is happening in your app and share it with the user.  For example, I include a state for the id of the idea being edited and a notification to pop up when changes had been made.  I really struggled with telling the application which idea to edit when I was working on my MERN app as I had no way of specifying which idea on the page I wanted to edit. I now know to tell the program through the state.
 
-Future improvements include:
-  - making a login so that teams can collaborate to the board.  I would colour code who suggested which idea
-  - adding a conversation to each idea where team members can discuss and add to the idea
-  - some kind of graph to show which ideas the team have built per month and how far they have got with each - i'd love to add some kind of special effects to celebrate when a team decides to start or finish an idea - perhaps a fireworks graphic across the screen and a champagne pop when the idea is created!
-  - I'd also create an archive where the team could look back on their past ideas 
+I've also been working on an Express/Node back end.  It works and the react front end works but I'm struggling to make "proxy" work in the package.json of the front-end which is preventing the client and server from communicating.
 
-To run, first run the ideaboard-api with command rails s -p 3001
-Then run the ideaboard file with npm start
+To run, first run the ideaboard-api, having run "bundle install" and then run "rails s -p 3001"
+Then run "yarn" on the ideaboard file and then "npm start"
