@@ -24,7 +24,7 @@ class IdeasContainer extends Component {
   }
 
   callApi = async () => {
-    const response = await fetch('/ideas');
+    const response = await fetch('http://localhost:4000/api/ideas');
     const body = await response.json();
 
     if (response.status !== 200) throw Error(body.message);
@@ -34,7 +34,7 @@ class IdeasContainer extends Component {
 
   addNewIdea = () => {
     axios.post(
-      '/ideas',
+      'http://localhost:4000/api/ideas',
       { idea:
         {
           title: '',
@@ -74,7 +74,7 @@ class IdeasContainer extends Component {
   }
 
   deleteIdea = (id) => {
-    axios.delete(`/ideas/${id}`)
+    axios.delete(`http://localhost:4000/api/ideas/${id}`)
       .then(response => {
         const ideaIndex = this.state.ideas.findIndex(x => x.id === id);
         const ideas = update(this.state.ideas, { $splice: [[ideaIndex, 1]]});

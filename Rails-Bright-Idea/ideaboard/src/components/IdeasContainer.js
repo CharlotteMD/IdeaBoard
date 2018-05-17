@@ -93,18 +93,22 @@ class IdeasContainer extends Component {
           </span>
         </div>
 
-        {this.state.ideas.map((idea) => {
-          if(this.state.editingIdeaId === idea.id) {
-            return(<IdeaForm idea={idea} key={idea.id}
-              updateIdea={this.updateIdea}
-              titleRef= {input => this.title = input}
-              resetNotification={this.resetNotification} />);
-          } else {
-            return (<Idea idea={idea} key={idea.id}
-              onClick={this.enableEditing}
-              onDelete={this.deleteIdea}/>);
-          }
-        })}
+        <div className="ideas">
+
+          {this.state.ideas.map((idea) => {
+            if(this.state.editingIdeaId === idea.id) {
+              return(<IdeaForm idea={idea} key={idea.id}
+                updateIdea={this.updateIdea}
+                titleRef= {input => this.title = input}
+                resetNotification={this.resetNotification} />);
+            } else {
+              return (<Idea idea={idea} key={idea.id}
+                onClick={this.enableEditing}
+                onDelete={this.deleteIdea}/>);
+            }
+          })}
+
+        </div>
 
       </div>
     );

@@ -30,6 +30,12 @@ html {
   text-align: center;
 }
 
+.ideas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .tile {
   height: 130px;
   width: 130px;
@@ -66,7 +72,7 @@ h4 {
   background: none;
   outline: none;
   margin-top:10px;
-  width: 140px;
+  width: 130px;
   font-size: 11px;
 }
 

@@ -30,15 +30,21 @@ html {
   text-align: center;
 }
 
+.ideas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .tile {
-  height: 140px;
-  width: 140px;
+  height: 130px;
+  width: 130px;
   margin: 10px;
   background: #FFB800;
   float: left;
   font-size: 11px;
   text-align: left;
-  padding: 5px;
+  padding: 10px;
 }
 
 .tile:hover {
@@ -66,7 +72,7 @@ h4 {
   background: none;
   outline: none;
   margin-top:10px;
-  width: 135px;
+  width: 130px;
   font-size: 11px;
 }
 
@@ -91,9 +97,4 @@ textarea {
 
 .tile:hover .deleteButton {
   visibility: visible;
-}
-
-.mapped {
-  /* text-align: center; */
-  margin: 0 auto;
 }

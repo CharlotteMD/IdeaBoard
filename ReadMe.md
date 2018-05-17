@@ -16,7 +16,20 @@ I can now more easily visualise how state and props works. The parent component 
 
 I also learnt how you can add extra fields to the state so you can monitor what is happening in your app and share it with the user.  For example, I include a state for the id of the idea being edited and a notification to pop up when changes had been made.  I really struggled with telling the application which idea to edit when I was working on my MERN app as I had no way of specifying which idea on the page I wanted to edit. I now know to tell the program through the state.
 
+The styling for this project is based on Post-It notes! :) Given more time I would add a curl page effect so the tiles looked more like paper.
+
 I've also been working on an Express/Node back end.  It works and the react front end works but I'm struggling to make "proxy" work in the package.json of the front-end which is preventing the client and server from communicating.
 
+Future additions to this project could be:
+  - login and user authentication so you can work in a team. You would be colour coded based on which idea you came up with.
+  - add some kind of graph to show how many ideas had been thought of, how many were being worked on and how many had been completed each month per team.
+  - Have a show page or else a module that pops up where you can learn more about the idea and perhaps leave comments to your team on how you can build on the idea.
+
+RAILS
 To run, first run the ideaboard-api, having run "bundle install" and then run "rails s -p 3001"
 Then run "yarn" on the ideaboard file and then "npm start"
+
+Node
+Install yarn on the Node API, then run nodemon. Make sure you also have Mongod running.
+To run the front end, install yarn in React-BrightIdea and then run npm start.
+Unfortunately I have not managed to get these to run together.

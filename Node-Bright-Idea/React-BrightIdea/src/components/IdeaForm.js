@@ -22,7 +22,7 @@ class IdeaForm extends Component {
     };
 
     axios.put(
-      `/ideas/${this.props.idea._id}`,
+      `http://localhost:4000/api/ideas/${this.props.idea._id}`,
       {
         idea: idea
       })
